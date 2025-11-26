@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>System Starting...</title>
+<style>
+body{
+  margin:0;
+  background:#0f172a;
+  color:#17961d;
+  font-family:Consolas, monospace;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+}
+
+.boot-screen{
+  text-align:left;
+  font-size:18px;
+}
+
+.cursor{
+  display:inline-block;
+  background:#00eaff;
+  width:8px;
+  margin-left:5px;
+  animation:blink 1s infinite;
+}
+
+@keyframes blink{
+  50%{opacity:0;}
+}
+</style>
+</head>
+<body>
+
+<div class="boot-screen" id="text"></div>
+
+<script>
+const lines = [
+  "Hi, Welcome to My Second Project...",
+  "What do you think now...",
+  "It's also Simple E-Commerce Design But Not Fully Functional...",
+  "System ready ✔ wait a few seconds to show my Second project",
+   "are you ready to see Amazing Website?",
+  "Now Opening website..."
+
+];
+
+let index = 0;
+let charIndex = 0;
+const speed = 60;
+const container = document.getElementById("text");
+
+function typeEffect(){
+  if(index < lines.length){
+    if(charIndex < lines[index].length){
+      container.innerHTML += lines[index].charAt(charIndex);
+      charIndex++;
+      setTimeout(typeEffect, speed);
+    } else {
+      container.innerHTML += "<br>";
+      index++;
+      charIndex = 0;
+      setTimeout(typeEffect, 600);
+    }
+  } else {
+    setTimeout(() => {
+      window.location.href = "https://animan484.github.io/F2/"; // your real website
+    }, 1500);
+  }
+}
+typeEffect();
+</script>
+
+</body>
+</html>

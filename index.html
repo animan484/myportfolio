@@ -1,0 +1,107 @@
+<!-- =========================
+FILE: index.html (HOME PAGE)
+========================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Home page</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="home-page">
+<header>
+    <nav class="navbar">
+      <div class="nav-wrapper">
+        <div class="logo">My Portfolio</div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="menu" id="navMenu">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="portfolio.html">My Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+<section class="hero">
+<div class="hero-content">
+<div class="hero-text">
+<h1 id="text"></h1>
+<script>
+const text = "Hello, I am Anwar";
+let i = 0;
+
+function typeWriter() {
+  if (i < text.length) {
+    document.getElementById("text").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, 150); // speed
+  }
+}
+typeWriter();
+</script>
+<p>Creative Web Developer crafting interactive modern experiences. <br> i was graduated before a month and now i am working for Carton Factory </p>
+<a class="btn" href="portfolio.html">View My Projects</a>
+</div>
+<div class="hero-image">
+<div class="image-placeholder hover-animate"><img src="Anwar.jpg" alt="my photo" width="100%"; height="100%"; class="image-placeholder hover-animate"></div>
+</div>
+</div>
+</section>
+<section id="documents">
+  <h2 class="mydocuments"> 📂 My Documents</h2>
+  <div class="pdf-list">
+
+    <div class="pdf-card">
+      <div class="cv">My Cv</div>
+      <a href="Anwar CV.pdf" class="download-btn" download>⬇ Download</a>
+    </div>
+
+    <div class="pdf-card">
+      <div class="cv">Education</div>
+      <a href="Education.pdf" class="download-btn" download>⬇ Download</a>
+    </div>
+
+    <div class="pdf-card">
+      <div class="cv">Nano Degree </div>
+      <a href="Nano degree.PDF" class="download-btn" download>⬇ Download</a>
+    </div>
+
+  </div>
+</section>
+
+  <footer class="fixed-footer">
+    © 2025 MyPortfolio. All rights reserved.
+  </footer>
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    hamburger.classList.toggle('open');
+  });
+</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

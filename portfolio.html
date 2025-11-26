@@ -1,0 +1,70 @@
+<!-- =========================
+FILE: portfolio.html
+========================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Projects</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+      <div class="nav-wrapper">
+        <div class="logo">My Portfolio</div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="menu" id="navMenu">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="portfolio.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<section class="page-section">
+<h2>My Projects</h2> <br>
+
+<p class="note">Click any project to view details</p>
+
+
+<div class="projects-grid">
+<div class="project-card">
+  <div class="website-frame"> <a href="intro.html" target="_blank" class="btn2">Project One  </a>
+</div>
+
+</div>
+<div class="project-card" > <div class="website-frame"> <a href="intro2.html" target="_blank" class="btn2">Project Two </a> </div> 
+</div>
+<div class="website-frame"> 
+<div class="project-card" > <a href="#" target="_blank" class="btn2">Project Three </a> </div>
+</div>
+
+<div class="project-card"> <a href="#" target="_blank" class="btn2">Project Four </a> </div>
+</section>
+
+<br><br><br><br><br><br>
+<footer class="fixed-footer">
+  © 2025 MyPortfolio. All rights reserved.
+</footer>
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    hamburger.classList.toggle('open');
+  });
+</script>
+</body>
+
+</html>
